@@ -1,0 +1,48 @@
+<!--Topic 1: Array Traversing and accessing
+->Make HTML pg write basic array
+->Traversing with loop
+->Accessing Elememts
+->Access elements with text input and button
+->Validation
+   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing</title>
+    <script>
+        //traversing
+        alert("Script is running")
+        let data = [2,3,1,4,5,75,78];
+        for(let i=0; i < data.length; i++)
+        {
+            document.write(`Array ${i} is ${data[i]} <br>`)
+        }
+        //accessing
+        let x=5
+        document.write(data[x])
+
+        //function
+        function getElement(){
+            let el=document.getElementById("element").value
+            if(el<data.length && typeof parseInt(el)=== "number" && el>=0 ){
+                alert(data[el])
+            }
+            else{
+                alert("Pls enter valid index")
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="element"/>
+    <button onclick="getElement()"> Get element</button>
+    
+
+    
+</body>
+</html>
