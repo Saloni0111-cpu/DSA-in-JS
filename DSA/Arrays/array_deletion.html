@@ -1,0 +1,47 @@
+<!--
+Topic 3: Delete Element in array
+->Make array define position //static
+->Use loop to delete element
+->delete element with text input and button //dynamic
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Element from an Array</title>
+    <script>
+      //Static
+      /* let data = [1, 2, 3, 4, 5, 6]
+      let position = 3
+      for (let i = position; i < data.length - 1; i++) {
+        data[i] = data[i + 1]
+      }
+      data.length = data.length - 1
+      console.warn(data) */
+
+      //Dynamic
+      function delEl() {
+        let data = [1, 2, 3, 4, 5, 6]
+        let position = document.getElementById('position').value
+        position = parseInt(position)
+        for (let i = position; i < data.length - 1; i++) {
+          data[i] = data[i + 1]
+        }
+        data.length = data.length - 1
+        console.warn(data)
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      placeholder="enter position"
+      id="position"
+      onclick="delEl()"
+    />
+
+    <button onclick="delEl()">Remove Element</button>
+  </body>
+</html>
