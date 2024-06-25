@@ -1,0 +1,45 @@
+<!--
+Topic:5 Merging two Array
+->Make 3 arrays
+->Use 2 different Loop to Merge element: 1]For Loop 2]While Loop
+->shortcut for merging array(Default function)
+-->
+
+<!--1] USING FOR LOOP -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merge two array</title>
+    <script>
+      let data = [1, 2, 3, 4, 5]
+      let data1 = [100, 1000, 10000, 100000, 1000000] // its 3rd array just took for testing
+      let data2 = [6, 7, 8, 9, 10]
+      let data3 = []
+
+      for (i = 0; i < data.length; i++) {
+        data3[i] = data[i]
+      }
+      for (i = 0; i < data1.length; i++) {
+        data3[data.length + i] = data1[i]
+      }
+      for (i = 0; i < data2.length; i++) {
+        data3[data.length + data1.length + i] = data2[i]
+      }
+      console.warn(data3)
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!--1] USING FOR LOOP -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merging Two Array with While Loop</title>
+  </head>
+  <body></body>
+</html>
