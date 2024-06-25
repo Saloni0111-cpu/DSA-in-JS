@@ -6,3 +6,50 @@ Topic 4: Search Element in an Array
 ->Shortcut for search element (Default function)
 ->Shortcut for delete element (Default function)
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Array Element</title>
+    <script>
+      //static method
+      /* let data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      let item = 4 //item to be searched in an array
+      let index = undefined
+
+      for (i = 0; i < data.length; i++) {
+        if (data[i] === item) {
+          index = i
+        }
+      }
+      console.warn(index) */
+
+      //by default function for searching ann element in an array is => console.warn(data.indexOf(item))
+
+      //dynamic method
+      function searchElement() {
+        let data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let item = document.getElementById('searchEl').value
+        let index = undefined
+        for (i = 0; i <= data.length - 1; i++) {
+          if (data[i] === parseInt(item)) {
+            index = i
+            break
+          }
+        }
+        console.warn(index)
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      placeholder="Search Element"
+      id="searchEl"
+      onclick="searchElement()"
+    />
+    <button onclick="searchElement()">Search Element</button>
+  </body>
+</html>
