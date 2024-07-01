@@ -1,0 +1,32 @@
+<!--
+Topic7: Array Sorting
+->Create arrat data;
+->use Nested Loop i.e. loop inside loop(We used 2 for loops here)
+->Swap using temp variable
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting an Array</title>
+    <script>
+      let data = [90, 40, 30, 20, 700, 2, 132, 220, 100, 1000]
+      for (i = 0; i < data.length; i++) {
+        for (j = 0; j < data.length; j++) {
+          console.warn(data)
+          if (data[j] > data[j + 1]) {
+            let temp = data[j]
+            data[j] = data[j + 1]
+            data[j + 1] = temp
+          }
+        }
+      }
+      console.warn(data)
+    </script>
+  </head>
+  <body>
+    <h1>Sorting an Array</h1>
+  </body>
+</html>
