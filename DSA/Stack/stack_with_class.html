@@ -1,0 +1,52 @@
+<!--
+Topic 4: Stack with Class
+->Make a class
+->Make a Push and Pop  fun for operation
+->Test stack operation with console
+->Task:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack Operation</title>
+    <script>
+      class Stack {
+        item = []
+        currentSize
+        maxSize
+        constructor(size) {
+          this.maxSize = size
+          this.currentSize = this.item.length
+        }
+        push(newVal) {
+          if (this.currentSize >= this.maxSize) {
+            alert('Stack is overflowed')
+          } else {
+            this.item[this.currentSize] = newVal
+            this.currentSize++
+          }
+        }
+        pop() {
+          if (this.currentSize > 0) {
+            this.currentSize--
+            this.item.length = this.currentSize
+          } else {
+            alert('Stack is empty')
+          }
+        }
+        display() {
+          console.warn(this.item)
+        }
+      }
+      st1 = new Stack(5)
+      /* st1.push(20)
+      st1.display() */
+    </script>
+  </head>
+  <body>
+    <h1>Stack With Class</h1>
+  </body>
+</html>
