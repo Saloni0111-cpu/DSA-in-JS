@@ -1,0 +1,32 @@
+<!--
+Topic:4 Recursion array with reverse
+->Understand how logic will work
+->code implementation
+->test with different arrays
+->JS default function for reverse array: data.reverse()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursion array with reverse</title>
+
+    <script>
+      let data = [12, 34, 54, 66, 78, 700, 800, 900]
+      let temp
+      function reverseArray(data, start, end) {
+        console.warn(data)
+        if (start <= end) {
+          temp = data[start]
+          data[start] = data[end]
+          data[end] = temp
+          reverseArray(data, start + 1, end - 1)
+        }
+      }
+      reverseArray(data, 0, data.length - 1)
+    </script>
+  </head>
+  <body></body>
+</html>
