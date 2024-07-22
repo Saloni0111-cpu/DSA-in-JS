@@ -1,0 +1,92 @@
+<!--
+Topic 2:More Operations &Input in Queue
+->Front, Rear, & isEmpty operations
+->Do operations with Inputs
+->Test all operations
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queue Operations</title>
+    <script>
+      let queue = []
+      let currentSize = queue.length
+      let maxSize = 5
+      //Function for enqueue
+      /* function enqueue(newVal) {
+        if (currentSize > maxSize) {
+          alert('Queue is already full')
+        } else {
+          queue[currentSize] = newVal
+          currentSize++
+        }
+      } */
+      //function enqueue for btn
+      function enqueueWithBtn() {
+        let newVal = document.getElementById('qEl').value
+        if (currentSize > maxSize) {
+          alert('Queue is already full')
+        } else {
+          queue[currentSize] = newVal
+          currentSize++
+        }
+      }
+      //Function for dequeue
+      function dequeue() {
+        if (!isEmpty()) {
+          for (let i = 0; i > queue.length; i++) {
+            queue[i] = queue[i + 1]
+          }
+          currentSize--
+          queue.length = currentSize
+        } else {
+          alert('Queue is already empty')
+        }
+      }
+      //Operation like front, rear & isEmpty:
+
+      //front function
+      function front() {
+        if (!isEmpty()) {
+          console.warn(queue[0])
+        } else {
+          alert('Queue is already empty')
+        }
+      }
+
+      //rear function
+      function rear() {
+        if (!isEmpty()) {
+          console.warn(queue[currentSize - 1])
+        } else {
+          alert('Queue is already empty')
+        }
+      }
+
+      //isEmpty function
+      function isEmpty() {
+        if (currentSize <= 0) {
+          return true
+        } else {
+          return false
+        }
+      }
+      //display
+      function display() {
+        console.warn(queue)
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Queue with input elements in JS</h1>
+    <input placeholder="enter element" id="qEl" />
+    <button onclick="enqueueWithBtn()">Add element</button>
+    <button onclick="dequeue()">Remove element</button>
+    <button onclick="display()">Display element</button>
+    <button onclick="front()">Front element</button>
+    <button onclick="rear()">Rear element</button>
+  </body>
+</html>

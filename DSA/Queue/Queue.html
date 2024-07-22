@@ -1,0 +1,50 @@
+<!--
+Topic 1: Queue in Js.
+->What is Queue? ->Linear data structure
+->Enqueue & Dequeue operations
+->Implement enqueue and Dequeue function for operations.
+->Test Queue operations with console.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queue Operations in ja</title>
+    <script>
+      let queue = []
+      let currentSize = queue.length
+      let maxSize = 5
+
+      function enqueue(newVal) {
+        if (currentSize >= maxSize) {
+          alert('Queue is already full')
+        } else {
+          queue[currentSize] = newVal
+          currentSize++
+        }
+      }
+
+      function display() {
+        console.warn(queue)
+      }
+      function dequeue() {
+        if (currentSize > 0) {
+          for (let i = 0; i > queue.length; i++) {
+            queue[i] = queue[i + 1]
+          }
+          currentSize--
+          queue.length = currentSize
+        } else {
+          alert('Queue is already empty')
+        }
+      }
+      enqueue(10)
+      enqueue(50)
+      enqueue(100)
+      display()
+    </script>
+  </head>
+  <body></body>
+</html>
